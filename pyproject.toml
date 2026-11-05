@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "types-glmm"
+# <upstream glmm version>.<stub release date>
+version = "0.8.0.20261105"
+description = "Typing stubs for glmm"
+readme = "README.md"
+license = "LGPL-3.0-or-later"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Typing :: Stubs Only",
+]
+
+[dependency-groups]
+dev = [
+    "glmm==0.8.0",
+    "mypy>=1.13",  # only for stubtest (runtime vs stub comparison)
+    "pandas>=2.3.3",
+    "pandas-stubs>=2.3.3.260113",
+    "pyrefly",
+    "pytest>=9.2.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["glmm-stubs"]
+
+[tool.hatch.build.targets.sdist]
+include = ["glmm-stubs", "README.md"]
+
+[tool.uv]
+# Rebuild the (non-editable) stub install whenever a stub changes
+cache-keys = [{ file = "pyproject.toml" }, { file = "glmm-stubs/**/*.pyi" }]

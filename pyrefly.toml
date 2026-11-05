@@ -1,0 +1,6 @@
+preset = "strict"
+baseline = "upstream-baseline.json"
+
+[errors]
+implicit-any-empty-container = false
+implicit-any-parameter = false
