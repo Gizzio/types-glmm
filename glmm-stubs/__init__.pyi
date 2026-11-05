@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from typing import Any, Literal, Protocol, TypeAlias, TypedDict, overload, type_check_only
 
 import numpy as np
-from _typeshed import Incomplete
+from glmm.summary import Summary
 from numpy.typing import ArrayLike, NDArray
 
 @type_check_only
@@ -128,14 +128,61 @@ class NoCoefficientsWarning(DiagnosticWarning): ...
 class NbShapeUnsettledWarning(DiagnosticWarning): ...
 class NonIntegerResponseWarning(DiagnosticWarning): ...
 
+_Boundary: TypeAlias = Literal["interior", "at_boundary", "no_optimum", "upper_limit"]
+_DfMethod: TypeAlias = Literal["satterthwaite", "residual", "none", "disabled", "failed"]
+_Objective: TypeAlias = Literal[
+    "least_squares", "maximum_likelihood", "reml", "laplace", "agq"
+]
+_Adjust: TypeAlias = Literal["holm", "bonferroni", "tukey", "none"]
+
+@type_check_only
+class _Note(TypedDict):
+    kind: str
+    columns: list[int]
+    pivot: float
+    evals: int
+    final_eval: bool
+    detail: str
+
 @type_check_only
 class Diagnostics(TypedDict):
     converged: bool
     singular: bool
     aliased: NDArray[np.bool_]
-    boundary: Literal["interior"]
-    pinned: list
-    notes: list
+    boundary: _Boundary
+    pinned: list[list[bool]]
+    notes: list[_Note]
+
+@type_check_only
+class _WarningRecord(TypedDict):
+    tier: Literal["severe", "caution", "note"]
+    kind: str
+    title: str
+    message: str
+
+@type_check_only
+class _RanefBlock(TypedDict):
+    group: str
+    terms: list[str]
+    levels: list[str]
+    values: NDArray[np.float64]
+    postvar: NDArray[np.float64] | None
+    condsd: NDArray[np.float64] | None
+
+@type_check_only
+class _R2(TypedDict):
+    marginal: float
+    conditional: float
+
+@type_check_only
+class _ICC(TypedDict):
+    adjusted: float
+    unadjusted: float
+
+@type_check_only
+class _TermTestAuto(TypedDict):
+    test: str
+    reason: str
 
 @dataclass
 class Fit:
@@ -143,13 +190,13 @@ class Fit:
     se: NDArray[np.float64]
     vcov: NDArray[np.float64]
     tau2: NDArray[np.float64]
-    varcorr: list
+    varcorr: list[list[float]]
     stddev_se: NDArray[np.float64]
     diagnostics: Diagnostics
     dispersion: float
-    names: list
-    re_groups: list
-    re_term_index: list
+    names: list[str]
+    re_groups: list[tuple[str, list[str]]]
+    re_term_index: list[list[int]]
     n_eval: int
     n_grad: int
     outer_stop: str | None
@@ -161,52 +208,59 @@ class Fit:
     fitted: NDArray[np.float64]
     ranef: NDArray[np.float64]
     ranef_levels: NDArray[np.int_]
-    ranef_blocks: list
+    ranef_blocks: list[_RanefBlock]
     formula: str
-    family: str
-    link: str
+    family: _Family
+    link: _Link
     nagq: int
     nobs: int
     y: NDArray[np.float64]
     weights: NDArray[np.float64] | None
     coef_df: NDArray[np.float64]
     coef_p: NDArray[np.float64]
-    df_method: str
+    df_method: _DfMethod
     rss: float
     r_squared: float
     adj_r_squared: float
-    warnings: list = ...
+    warnings: list[_WarningRecord] = ...
     dispersion_held: float | None = None
     design_summary: dict[str, NDArray[np.float64]] | None = None
     offset: NDArray[np.float64] | None = None
-    objective: str | None = None
+    objective: _Objective | None = None
     objective_nodes: int = 0
-    term_table_type3: dict | None = None
-    term_table_type2: dict | None = None
-    term_table_type3_lrt: dict | None = None
-    term_table_type2_lrt: dict | None = None
-    term_test_auto: dict | None = None
-    satterthwaite_record: dict | None = None
-    _kernel_parts: dict | None = None
+    # Heterogeneous per-term tables (str / list / ndarray values); see Fit docs.
+    # fit() always fills these three; the runtime default None only shows on a
+    # Fit pickled by an older glmm, which is outside the stub's contract.
+    term_table_type3: dict[str, Any] = ...
+    term_table_type2: dict[str, Any] = ...
+    term_table_type3_lrt: dict[str, Any] | None = None
+    term_table_type2_lrt: dict[str, Any] | None = None
+    term_test_auto: _TermTestAuto = ...
+    satterthwaite_record: dict[str, Any] | None = None
+    _kernel_parts: dict[str, Any] | None = None
 
     @property
-    def converged(self) -> Incomplete: ...
+    def converged(self) -> bool: ...
     @property
-    def singular(self) -> Incomplete: ...
+    def singular(self) -> bool: ...
     @property
-    def aliased(self) -> Incomplete: ...
+    def aliased(self) -> NDArray[np.bool_]: ...
     @property
-    def aic(self) -> Incomplete: ...
+    def aic(self) -> float: ...
     @property
-    def bic(self) -> Incomplete: ...
-    def stddev_corr(self, group_idx: Incomplete) -> Incomplete: ...
-    def summary(self) -> Incomplete: ...
-    def summary_object(self) -> Incomplete: ...
-    def confint(self, level: Incomplete = 0.95) -> Incomplete: ...
+    def bic(self) -> float: ...
+    def stddev_corr(
+        self, group_idx: int
+    ) -> tuple[NDArray[np.float64], NDArray[np.float64]]: ...
+    def summary(self) -> str: ...
+    def summary_object(self) -> Summary: ...
+    def confint(self, level: float = 0.95) -> NDArray[np.float64]: ...
     def profile_confint(
-        self, level: Incomplete = 0.95, parm: Incomplete = None
-    ) -> Incomplete: ...
-    def contrast_test(self, L: NDArray[np.float64]) -> TermTable: ...
+        self,
+        level: float = 0.95,
+        parm: str | list[str] | tuple[str, ...] | None = None,
+    ) -> ProfileTable: ...
+    def contrast_test(self, L: ArrayLike) -> TermTable: ...
     @overload
     def predict(
         self,
@@ -265,11 +319,15 @@ class Fit:
         level: float = 0.95,
         future: bool = False,
     ) -> NDArray[np.float64] | _Prediction: ...
-    def simulate(self, nsim: Incomplete = 1, seed: Incomplete = None) -> Incomplete: ...
-    def r2(self) -> Incomplete: ...
-    def icc(self) -> Incomplete: ...
-    def __setstate__(self, state: Incomplete) -> Incomplete: ...
-    def residuals(self, type: Incomplete = "response") -> Incomplete: ...
+    def simulate(
+        self, nsim: int | np.integer = 1, seed: int | np.integer | None = None
+    ) -> NDArray[np.float64]: ...
+    def r2(self) -> _R2: ...
+    def icc(self) -> _ICC: ...
+    def __setstate__(self, state: dict[str, Any]) -> None: ...
+    def residuals(
+        self, type: Literal["response", "pearson"] = "response"
+    ) -> NDArray[np.float64]: ...
 
 def fit(
     data: _Data,
@@ -289,15 +347,17 @@ def fit(
     reml: bool | np.bool_ | None = None,
     anova_test: Literal["auto", "Wald", "LRT"] = "auto",
 ) -> Fit: ...
-def model_matrix(data: Incomplete, formula: Incomplete) -> Incomplete: ...
+def model_matrix(
+    data: _Data, formula: str
+) -> tuple[NDArray[np.float64], list[str]]: ...
 def pairwise(
-    m: Incomplete,
-    factor: Incomplete,
-    by: Incomplete = None,
-    at: Incomplete = None,
-    adjust: Incomplete = "holm",
-) -> Incomplete: ...
-def term_labels(formula: Incomplete) -> Incomplete: ...
+    m: Fit,
+    factor: str,
+    by: str | None = None,
+    at: ArrayLike | None = None,
+    adjust: _Adjust = "holm",
+) -> PairwiseTable: ...
+def term_labels(formula: str) -> tuple[list[str], bool]: ...
 
 from glmm.anova import (
     Comparison,

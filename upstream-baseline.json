@@ -1,20 +1,6 @@
 {
   "errors": [
     {
-      "column": 41,
-      "path": "../glmm/python/tests/test_anova.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `Literal['lrt']` is not assignable to parameter `anova_test` with type `Literal['LRT', 'Wald', 'auto']` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 54,
-      "path": "../glmm/python/tests/test_anova.py",
-      "name": "implicit-any-lambda",
-      "concise_description": "Type of lambda parameter `a` is unknown",
-      "severity": "error"
-    },
-    {
       "column": 12,
       "path": "../glmm/python/tests/test_anova.py",
       "name": "missing-attribute",
@@ -29,10 +15,87 @@
       "severity": "error"
     },
     {
+      "column": 54,
+      "path": "../glmm/python/tests/test_anova.py",
+      "name": "implicit-any-lambda",
+      "concise_description": "Type of lambda parameter `a` is unknown",
+      "severity": "error"
+    },
+    {
+      "column": 41,
+      "path": "../glmm/python/tests/test_anova.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Literal['lrt']` is not assignable to parameter `anova_test` with type `Literal['LRT', 'Wald', 'auto']` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "../glmm/python/tests/test_anova.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 40,
+      "path": "../glmm/python/tests/test_anova.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Literal['sidak']` is not assignable to parameter `adjust` with type `Literal['bonferroni', 'holm', 'none', 'tukey']` in function `glmm.pairwise`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "../glmm/python/tests/test_anova.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Literal['m']` is not assignable to parameter `m` with type `Fit` in function `glmm.pairwise`",
+      "severity": "error"
+    },
+    {
+      "column": 27,
+      "path": "../glmm/python/tests/test_api.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `object` is not assignable to parameter `x` with type `SupportsFloat | SupportsIndex` in function `math.isnan`",
+      "severity": "error"
+    },
+    {
+      "column": 30,
+      "path": "../glmm/python/tests/test_api.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `object` is not assignable to parameter `x` with type `SupportsFloat | SupportsIndex` in function `math.isfinite`",
+      "severity": "error"
+    },
+    {
+      "column": 32,
+      "path": "../glmm/python/tests/test_api.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Literal[3]` is not assignable to parameter `parm` with type `list[str] | str | tuple[str, ...] | None` in function `glmm.Fit.profile_confint`",
+      "severity": "error"
+    },
+    {
       "column": 23,
       "path": "../glmm/python/tests/test_factor_levels.py",
       "name": "bad-argument-type",
       "concise_description": "Argument `dict[str, _FakeDictionaryArray | list[float]]` is not assignable to parameter `data` with type `Mapping[str, Iterable[Any]] | _ArrowTableLike | _DataFrameLike` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "../glmm/python/tests/test_fit_wiring.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 51,
+      "path": "../glmm/python/tests/test_fit_wiring.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `values`",
+      "severity": "error"
+    },
+    {
+      "column": 35,
+      "path": "../glmm/python/tests/test_fit_wiring.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
       "severity": "error"
     },
     {
@@ -43,10 +106,31 @@
       "severity": "error"
     },
     {
-      "column": 18,
-      "path": "../glmm/python/tests/test_predict.py",
+      "column": 12,
+      "path": "../glmm/python/tests/test_fit_wiring.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `dtype`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "../glmm/python/tests/test_fit_wiring.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `flags`",
+      "severity": "error"
+    },
+    {
+      "column": 60,
+      "path": "../glmm/python/tests/test_fit_wiring.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `flags`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "../glmm/python/tests/test_fit_wiring.py",
       "name": "no-matching-overload",
-      "concise_description": "No matching overload found for function `glmm.Fit.predict` called with arguments: (dict[str, list[str] | Any], re_form=Literal['~ (1 | g)'])",
+      "concise_description": "No matching overload found for function `numpy.testing._private.utils.assert_allclose` called with arguments: (ndarray[tuple[Any, ...], dtype[float64]] | None, list[float])",
       "severity": "error"
     },
     {
@@ -57,164 +141,31 @@
       "severity": "error"
     },
     {
-      "column": 60,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `Literal['no']` is not assignable to parameter `satterthwaite` with type `builtins.bool | numpy.bool` in function `glmm.fit`",
+      "column": 18,
+      "path": "../glmm/python/tests/test_predict.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `glmm.Fit.predict` called with arguments: (dict[str, list[str] | Any], re_form=Literal['~ (1 | g)'])",
       "severity": "error"
     },
     {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `adj_r_squared` with type `float` in function `glmm.Fit.__init__`",
+      "column": 12,
+      "path": "../glmm/python/tests/test_predict.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `shape`",
       "severity": "error"
     },
     {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `deviance` with type `float` in function `glmm.Fit.__init__`",
+      "column": 65,
+      "path": "../glmm/python/tests/test_predict.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `numpy._core.fromnumeric.transpose` called with arguments: (ndarray[tuple[Any, ...], dtype[float64]] | None, tuple[Literal[0], Literal[2], Literal[1]])",
       "severity": "error"
     },
     {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `df_method` with type `str` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `df` with type `int` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `dispersion_held` with type `float | None` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `dispersion` with type `float` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `family` with type `str` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `formula` with type `str` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `link` with type `str` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `loglik` with type `float` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `n_eval` with type `int` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `n_grad` with type `int` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `nagq` with type `int` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `nobs` with type `int` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `objective_nodes` with type `int` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `objective` with type `str | None` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `outer_decrement` with type `float` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `outer_stop` with type `str | None` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `r_squared` with type `float` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `reml` with type `bool` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `rss` with type `float` in function `glmm.Fit.__init__`",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "../glmm/python/tests/test_summary.py",
-      "name": "unsupported-operation",
-      "concise_description": "Cannot set item in `None`",
+      "column": 45,
+      "path": "../glmm/python/tests/test_predict.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `numpy._core.fromnumeric.diagonal` called with arguments: (ndarray[tuple[Any, ...], dtype[float64]] | None, axis1=Literal[1], axis2=Literal[2])",
       "severity": "error"
     },
     {
@@ -253,6 +204,377 @@
       "severity": "error"
     },
     {
+      "column": 13,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `None`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `beta` with type `ndarray[tuple[Any, ...], dtype[float64]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `se` with type `ndarray[tuple[Any, ...], dtype[float64]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `vcov` with type `ndarray[tuple[Any, ...], dtype[float64]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `tau2` with type `ndarray[tuple[Any, ...], dtype[float64]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `varcorr` with type `list[list[float]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `stddev_se` with type `ndarray[tuple[Any, ...], dtype[float64]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `diagnostics` with type `Diagnostics` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `dispersion` with type `float` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `names` with type `list[str]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `re_groups` with type `list[tuple[str, list[str]]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `re_term_index` with type `list[list[int]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `n_eval` with type `int` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `n_grad` with type `int` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `outer_stop` with type `str | None` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `outer_decrement` with type `float` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `deviance` with type `float` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `loglik` with type `float` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `df` with type `int` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `reml` with type `bool` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `fitted` with type `ndarray[tuple[Any, ...], dtype[float64]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `ranef` with type `ndarray[tuple[Any, ...], dtype[float64]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `ranef_levels` with type `ndarray[tuple[Any, ...], dtype[signedinteger[_NBitIntP]]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `ranef_blocks` with type `list[_RanefBlock]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `formula` with type `str` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `family` with type `Literal['binomial', 'gamma', 'gaussian', 'inversegaussian', 'negativebinomial', 'poisson']` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `link` with type `Literal['cloglog', 'identity', 'inverse', 'inverse_squared', 'log', 'logit', 'probit']` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `nagq` with type `int` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `nobs` with type `int` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `y` with type `ndarray[tuple[Any, ...], dtype[float64]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `weights` with type `ndarray[tuple[Any, ...], dtype[float64]] | None` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `coef_df` with type `ndarray[tuple[Any, ...], dtype[float64]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `coef_p` with type `ndarray[tuple[Any, ...], dtype[float64]]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `df_method` with type `Literal['disabled', 'failed', 'none', 'residual', 'satterthwaite']` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `rss` with type `float` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `r_squared` with type `float` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `adj_r_squared` with type `float` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `warnings` with type `list[_WarningRecord]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `dispersion_held` with type `float | None` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `design_summary` with type `dict[str, ndarray[tuple[Any, ...], dtype[float64]]] | None` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `offset` with type `ndarray[tuple[Any, ...], dtype[float64]] | None` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `objective` with type `Literal['agq', 'laplace', 'least_squares', 'maximum_likelihood', 'reml'] | None` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `objective_nodes` with type `int` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `term_table_type3` with type `dict[str, Any]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `term_table_type2` with type `dict[str, Any]` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `term_table_type3_lrt` with type `dict[str, Any] | None` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `term_table_type2_lrt` with type `dict[str, Any] | None` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `term_test_auto` with type `_TermTestAuto` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `satterthwaite_record` with type `dict[str, Any] | None` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 21,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `bool | dict[str, bool | list[Unknown] | ndarray | str] | float | int | list[str] | ndarray | str | None` is not assignable to parameter `_kernel_parts` with type `dict[str, Any] | None` in function `glmm.Fit.__init__`",
+      "severity": "error"
+    },
+    {
+      "column": 31,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `numpy.testing._private.utils.assert_allclose` called with arguments: (ndarray | None, ndarray[tuple[Any, ...], dtype[float64]])",
+      "severity": "error"
+    },
+    {
+      "column": 26,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Literal['deviance']` is not assignable to parameter `type` with type `Literal['pearson', 'response']` in function `glmm.Fit.residuals`",
+      "severity": "error"
+    },
+    {
+      "column": 60,
+      "path": "../glmm/python/tests/test_summary.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Literal['no']` is not assignable to parameter `satterthwaite` with type `builtins.bool | numpy.bool` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
       "column": 33,
       "path": "../glmm/python/tests/test_validation.py",
       "name": "bad-argument-type",
@@ -284,112 +606,7 @@
       "column": 33,
       "path": "../glmm/python/tests/test_validation.py",
       "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `anova_test` with type `Literal['LRT', 'Wald', 'auto']` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `condvar` with type `builtins.bool | numpy.bool` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `dispersion` with type `Literal['estimate'] | float | None` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `family` with type `Literal['binomial', 'gamma', 'gaussian', 'inversegaussian', 'negativebinomial', 'poisson']` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `init_theta` with type `float | None` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `link` with type `Literal['cloglog', 'identity', 'inverse', 'inverse_squared', 'log', 'logit', 'probit'] | None` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `nagq` with type `int` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `reml` with type `builtins.bool | numpy.bool | None` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `satterthwaite` with type `builtins.bool | numpy.bool` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `wald_se` with type `Literal['hessian', 'rx']` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `warm_start` with type `_WarmStart | None` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `anova_test` with type `Literal['LRT', 'Wald', 'auto']` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `condvar` with type `builtins.bool | numpy.bool` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `dispersion` with type `Literal['estimate'] | float | None` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
       "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `family` with type `Literal['binomial', 'gamma', 'gaussian', 'inversegaussian', 'negativebinomial', 'poisson']` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `init_theta` with type `float | None` in function `glmm.fit`",
       "severity": "error"
     },
     {
@@ -403,21 +620,14 @@
       "column": 33,
       "path": "../glmm/python/tests/test_validation.py",
       "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `nagq` with type `int` in function `glmm.fit`",
+      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `dispersion` with type `Literal['estimate'] | float | None` in function `glmm.fit`",
       "severity": "error"
     },
     {
       "column": 33,
       "path": "../glmm/python/tests/test_validation.py",
       "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `reml` with type `builtins.bool | numpy.bool | None` in function `glmm.fit`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "../glmm/python/tests/test_validation.py",
-      "name": "bad-argument-type",
-      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `satterthwaite` with type `builtins.bool | numpy.bool` in function `glmm.fit`",
+      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `init_theta` with type `float | None` in function `glmm.fit`",
       "severity": "error"
     },
     {
@@ -431,42 +641,119 @@
       "column": 33,
       "path": "../glmm/python/tests/test_validation.py",
       "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `nagq` with type `int` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
       "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `warm_start` with type `_WarmStart | None` in function `glmm.fit`",
       "severity": "error"
     },
     {
-      "column": 24,
-      "path": "../glmm/python/tests/test_warnings.py",
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `dict[str, float | list[float]]` is not assignable to parameter `warm_start` with type `_WarmStart | None` in function `glmm.fit`",
+      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `satterthwaite` with type `builtins.bool | numpy.bool` in function `glmm.fit`",
       "severity": "error"
     },
     {
-      "column": 38,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_UNKNOWN_KIND` in module `glmm`",
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `condvar` with type `builtins.bool | numpy.bool` in function `glmm.fit`",
       "severity": "error"
     },
     {
-      "column": 61,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_UNKNOWN_KIND` in module `glmm`",
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `reml` with type `builtins.bool | numpy.bool | None` in function `glmm.fit`",
       "severity": "error"
     },
     {
-      "column": 23,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_WARNING_KINDS` in module `glmm`",
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float]` is not assignable to parameter `anova_test` with type `Literal['LRT', 'Wald', 'auto']` in function `glmm.fit`",
       "severity": "error"
     },
     {
-      "column": 46,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_WARNING_KINDS` in module `glmm`",
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `family` with type `Literal['binomial', 'gamma', 'gaussian', 'inversegaussian', 'negativebinomial', 'poisson']` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `link` with type `Literal['cloglog', 'identity', 'inverse', 'inverse_squared', 'log', 'logit', 'probit'] | None` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `dispersion` with type `Literal['estimate'] | float | None` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `init_theta` with type `float | None` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `wald_se` with type `Literal['hessian', 'rx']` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `nagq` with type `int` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `warm_start` with type `_WarmStart | None` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `satterthwaite` with type `builtins.bool | numpy.bool` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `condvar` with type `builtins.bool | numpy.bool` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `reml` with type `builtins.bool | numpy.bool | None` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "../glmm/python/tests/test_validation.py",
+      "name": "bad-argument-type",
+      "concise_description": "Unpacked keyword argument `list[float | Unknown]` is not assignable to parameter `anova_test` with type `Literal['LRT', 'Wald', 'auto']` in function `glmm.fit`",
       "severity": "error"
     },
     {
@@ -477,59 +764,87 @@
       "severity": "error"
     },
     {
-      "column": 11,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_nonconvergence` in module `glmm`",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_note_warning` in module `glmm`",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_note_warning` in module `glmm`",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_note_warning` in module `glmm`",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_note_warning` in module `glmm`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_note_warning` in module `glmm`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "../glmm/python/tests/test_warnings.py",
-      "name": "missing-attribute",
-      "concise_description": "No attribute `_note_warning` in module `glmm`",
-      "severity": "error"
-    },
-    {
       "column": 20,
       "path": "../glmm/python/tests/test_warnings.py",
       "name": "missing-attribute",
       "concise_description": "No attribute `_note_warning` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_warn` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 23,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_WARNING_KINDS` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 61,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_UNKNOWN_KIND` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_note_warning` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 16,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_note_warning` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_note_warning` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_note_warning` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_note_warning` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 12,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_note_warning` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `dict[str, float | list[float]]` is not assignable to parameter `warm_start` with type `_WarmStart | None` in function `glmm.fit`",
+      "severity": "error"
+    },
+    {
+      "column": 11,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_nonconvergence` in module `glmm`",
       "severity": "error"
     },
     {
@@ -540,10 +855,17 @@
       "severity": "error"
     },
     {
-      "column": 13,
+      "column": 46,
       "path": "../glmm/python/tests/test_warnings.py",
       "name": "missing-attribute",
-      "concise_description": "No attribute `_warn` in module `glmm`",
+      "concise_description": "No attribute `_WARNING_KINDS` in module `glmm`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "../glmm/python/tests/test_warnings.py",
+      "name": "missing-attribute",
+      "concise_description": "No attribute `_UNKNOWN_KIND` in module `glmm`",
       "severity": "error"
     }
   ]
